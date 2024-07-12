@@ -48,7 +48,7 @@ export const Projects = () => {
             {projects.map(project => (
                 <Card key={project.name} className={'project'}>
                     <div className={'top'}>
-                        <img className={'project-img'} src={project.preview}/>
+                        <img className={'project-img'} src={project.preview} alt={project.name} />
                         <p className={'project-name'}>{project.name}</p>
                         <p className={'project-description'}>{project.description}</p>
                     </div>

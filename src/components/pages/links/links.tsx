@@ -8,7 +8,6 @@ import {
     EMAIL,
     GITHUB,
     GITHUB_LINK,
-    GOOGLE_SPACING,
     LINKEDIN,
     LINKEDIN_LINK,
     TG,

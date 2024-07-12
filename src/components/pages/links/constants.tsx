@@ -9,5 +9,3 @@ export const GITHUB_LINK = 'https://github.com/ArkadyChakhalyan';
 export const CV = 'cv';
 export const LINKEDIN = 'ArkadyCh';
 export const LINKEDIN_LINK = 'https://linkedin.com/in/arkadyCh';
-
-export const GOOGLE_SPACING = 8;
