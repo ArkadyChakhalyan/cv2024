@@ -1,0 +1,30 @@
+@import 'src/styles/variables.scss';
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: $google-spacing * 3;
+  border-radius: $google-spacing;
+  background: $color-background-light;
+  box-shadow: $box-shadow;
+  animation: card-show 0.4s forwards cubic-bezier(0.250,  0.460,  0.450,  0.940);
+  overflow: hidden;
+
+  @media screen and (max-width: $mediaS) {
+    padding: $google-spacing * 3 $google-spacing * 2;
+  }
+}
+
+@keyframes card-show {
+  0% {
+    opacity: 0;
+    transform: translateY($google-spacing * 2.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+};

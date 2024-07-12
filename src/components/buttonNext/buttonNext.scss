@@ -1,0 +1,45 @@
+@import 'src/styles/variables.scss';
+
+.button-next {
+  display: flex;
+  align-items: center;
+  gap: $google-spacing * 0.8;
+  margin-top: $google-spacing * 4;
+  color: $color-primary;
+  opacity: 0;
+  transition: $transition-fast;
+  text-transform: uppercase;
+  font-size: $font-size-l;
+  user-select: none;
+  text-decoration: none;
+  pointer-events: none;
+  animation: button-next-show 0.4s forwards cubic-bezier(0.250,  0.460,  0.450,  0.940) 0.5s;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 1 !important;
+
+    svg {
+      transform: translateX($google-spacing * 0.5);
+    }
+  }
+
+  svg {
+    fill: $color-primary;
+    width: $google-spacing * 2;
+    transition: $transition-default;
+  }
+}
+
+@keyframes button-next-show {
+  from {
+    opacity: 0;
+    transform: translateX($google-spacing * -1.5);
+  }
+  to {
+    opacity: 0.9;
+    transform: translateX(0);
+    pointer-events: all;
+  }
+};

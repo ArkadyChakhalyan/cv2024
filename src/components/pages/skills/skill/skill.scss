@@ -1,0 +1,122 @@
+@import 'src/styles/variables.scss';
+
+.skill {
+  justify-content: flex-start;
+  width: $google-spacing * 22;
+  gap: $google-spacing * 1.5;
+
+  & > svg {
+    width: $google-spacing * 10;
+    height: $google-spacing * 10;
+    margin-bottom: $google-spacing;
+    fill: $color-primary;
+    opacity: 0.6;
+    transition: $transition-default;
+
+    @media screen and (max-width: $mediaS) {
+      width: $google-spacing * 8;
+      height: $google-spacing * 8;
+    }
+  }
+
+  .overlay & {
+    width: $google-spacing * 30;
+    height: fit-content;
+    animation: card-skill-show 0.4s forwards cubic-bezier(0.250,  0.460,  0.450,  0.940);
+
+    @media screen and (max-width: $mediaS) {
+      width: calc(100% - #{$google-spacing * 7});
+    }
+  }
+
+  &:hover,
+  &:focus-within,
+  .overlay & {
+    & > svg {
+      opacity: 0.8;
+    }
+  }
+
+  .button {
+    margin-top: $google-spacing;
+
+    @media screen and (max-width: $mediaM) {
+      margin-top: $google-spacing * 0.5;
+    }
+  }
+
+  @media screen and (max-width: $mediaM) {
+    padding-bottom: $google-spacing * 2;
+  }
+
+  @media screen and (max-width: $mediaS) {
+    align-items: center;
+    width: calc(100% - #{$google-spacing * 4});
+  }
+}
+
+.skill-title {
+  font-size: $font-size-l;
+  font-weight: bold;
+  color: $color-primary;
+}
+
+.skill-items {
+  display: flex;
+  flex-direction: column;
+  gap: $google-spacing * 0.75;
+  width: 100%;
+  padding-left: $google-spacing * 3;
+}
+
+.skill-item {
+  list-style-type: circle;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.button-icon {
+  position: absolute;
+  right: $google-spacing * 1.25;
+  top: $google-spacing * 1.25;
+  width: fit-content;
+
+  svg {
+    width: $google-spacing * 3.5;
+    height: $google-spacing * 3.5;
+    opacity: 0.8;
+    fill: $color-primary;
+    transition: $transition-fast;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    svg {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes card-skill-show {
+  0% {
+    opacity: 0.9;
+    transform: translateY($google-spacing * 2.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+};

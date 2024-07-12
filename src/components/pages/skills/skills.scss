@@ -1,0 +1,48 @@
+@import 'src/styles/variables.scss';
+
+$localMediaM: $mediaM + $google-spacing * 14;
+
+.skills-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  padding: $google-spacing * 4 $google-spacing * 3;
+
+  @media screen and (max-width: $localMediaM) {
+    height: unset;
+  }
+}
+
+.skills {
+  display: flex;
+  gap: $google-spacing * 3;
+
+  @media screen and (max-width: $mediaS) {
+    width: 100%;
+    flex-direction: column;
+    gap: $google-spacing * 2;
+  }
+}
+
+.start, .end {
+  display: flex;
+  gap: $google-spacing * 3;
+
+  @media screen and (max-width: $mediaS) {
+    gap: $google-spacing * 2;
+  }
+}
+
+.end {
+  @media screen and (max-width: $localMediaM) {
+    flex-direction: column;
+  }
+}
+
+.start {
+  @media screen and (max-width: $localMediaM) {
+    flex-direction: column;
+  }
+}

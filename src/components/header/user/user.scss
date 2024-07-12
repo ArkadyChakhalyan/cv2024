@@ -1,0 +1,32 @@
+@import 'src/styles/variables.scss';
+
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $google-spacing * 1.5;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: $google-spacing * 12;
+  height: $google-spacing * 12;
+  overflow: hidden;
+  user-select: none;
+
+  @media screen and (max-width: $mediaS) {
+    width: $google-spacing * 10;
+    height: $google-spacing * 10;
+  }
+}
+
+.username {
+  font-size: $font-size-xxl;
+  font-weight: bold;
+  user-select: none;
+
+  @media screen and (max-width: $mediaS) {
+    font-size: $font-size-xl;
+  }
+}

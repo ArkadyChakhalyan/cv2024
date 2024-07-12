@@ -1,0 +1,63 @@
+@import '../../../styles/variables';
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  padding: $google-spacing * 4 $google-spacing * 3;
+
+  .card {
+    gap: $google-spacing * 0.5;
+    min-width: $google-spacing * 37.5;
+
+    & > svg {
+      width: $google-spacing * 7;
+      height: $google-spacing * 7;
+      margin-bottom: $google-spacing;
+      fill: $color-primary;
+      opacity: 0.6;
+      transition: $transition-fast;
+    }
+
+    &:hover {
+      & > svg {
+        opacity: 0.8;
+      }
+    }
+
+    @media screen and (max-width: $mediaS) {
+      min-width: calc(100% - #{$google-spacing * 4});
+    }
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $google-spacing;
+  height: $google-spacing * 5;
+  opacity: 0.8;
+  transition: $transition-default;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 1;
+  }
+
+  svg {
+    width: $google-spacing * 2.5;
+    fill: $color-base;
+  }
+}
+
+.divider {
+  height: $google-spacing * 0.25;
+  width: 100%;
+  margin: $google-spacing * 2.5 0;
+  border-radius: 1px;
+  background: $color-background-light-alternative;
+}

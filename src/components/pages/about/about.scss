@@ -1,0 +1,48 @@
+@import 'src/styles/variables.scss';
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  padding: $google-spacing * 4 $google-spacing * 3;
+
+  .card {
+    width: 50%;
+    max-width: $google-spacing * 63;
+    gap: $google-spacing * 1.25;
+
+    svg {
+      width: $google-spacing * 7;
+      height: $google-spacing * 7;
+      margin-bottom: $google-spacing;
+      fill: $color-primary;
+      opacity: 0.6;
+      transition: $transition-fast;
+    }
+
+    &:hover {
+      svg {
+        opacity: 0.8;
+      }
+    }
+
+    @media screen and (max-width: $mediaM) {
+      width: 70%;
+    }
+
+    @media screen and (max-width: $mediaS) {
+      width: calc(100% - #{$google-spacing * 4});
+    }
+  }
+}
+
+.about-text {
+  text-align: center;
+  font-size: $font-size-l;
+
+  @media screen and (max-width: $mediaS) {
+    font-size: $font-size-m;
+  }
+}

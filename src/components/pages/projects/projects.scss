@@ -1,0 +1,85 @@
+@import 'src/styles/variables.scss';
+
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  gap: $google-spacing * 2;
+  padding: $google-spacing * 4 $google-spacing * 3;
+
+  @media screen and (max-width: $mediaS) {
+    height: unset;
+  }
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  gap: $google-spacing * 3;
+  width: 50%;
+  max-width: $google-spacing * 63;
+
+  @media screen and (max-width: $mediaM) {
+    width: 70%;
+  }
+
+  @media screen and (max-width: $mediaS) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.project {
+  justify-content: space-between;
+  gap: $google-spacing * 3;
+  min-width: $google-spacing * 26;
+
+  @media screen and (max-width: $mediaM) {
+    min-width: $google-spacing * 24;
+  }
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: $google-spacing * 1.5
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: $google-spacing * 0.75;
+  width: 100%;
+}
+
+.project-name {
+  font-size: $font-size-l;
+  font-weight: bold;
+  color: $color-primary;
+}
+
+.project-stack {
+  font-size: $font-size-s;
+  opacity: 0.8;
+}
+
+.project-description {
+  white-space: pre-line;
+}
+
+.project-img {
+  width: calc(100% + #{$google-spacing * 6});
+  margin: $google-spacing * -3;
+  margin-bottom: $google-spacing;
+
+  @media screen and (max-width: $mediaS) {
+    width: calc(100% + #{$google-spacing * 4});
+    margin-left: $google-spacing * -2;
+    margin-right: $google-spacing * -2;
+    margin-bottom: $google-spacing * 0.5;
+  }
+}

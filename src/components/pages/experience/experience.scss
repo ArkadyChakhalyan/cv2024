@@ -1,0 +1,80 @@
+@import 'src/styles/variables.scss';
+
+.experiences-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  gap: $google-spacing * 2;
+  padding: $google-spacing * 4 $google-spacing * 3;
+}
+
+.experiences {
+  display: flex;
+  flex-direction: column;
+  gap: $google-spacing * 3;
+  width: 50%;
+  max-width: $google-spacing * 63;
+  padding-left: $google-spacing * 3;
+  position: relative;
+
+  a {
+    color: $color-primary !important;
+    text-decoration: none;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: $google-spacing;
+    top: -$google-spacing;
+    bottom: -$google-spacing;
+    width: $google-spacing * 0.25;
+    background: $color-primary;
+  }
+
+  @media screen and (max-width: $mediaM) {
+    width: 70%;
+  }
+
+  @media screen and (max-width: $mediaS) {
+    width: calc(100% - #{$google-spacing * 4});
+  }
+}
+
+.experience {
+  align-items: flex-start;
+  overflow: visible;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: $google-spacing * 3;
+    left: $google-spacing * -2.5;
+    width: $google-spacing * 1.25;
+    height: $google-spacing * 1.25;
+    transform: translateY($google-spacing * 0.5);
+    border-radius: 50%;
+    background: $color-primary;
+  }
+}
+
+.experience-occupancy {
+  margin-bottom: $google-spacing * 0.5;
+  font-size: $font-size-l;
+  color: $color-primary;
+  font-weight: bold;
+}
+
+.experience-dates {
+  margin-bottom: $google-spacing;
+  font-size: $font-size-s;
+  opacity: 0.8;
+}
+
+.experience-description {
+  & + & {
+    margin-top: $google-spacing * 0.75;
+  }
+}

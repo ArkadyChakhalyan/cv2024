@@ -1,0 +1,41 @@
+@import 'src/styles/variables.scss';
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
+  width: 0;
+  min-height: $google-spacing * 4;
+  padding: $google-spacing * 1.5;
+  opacity: 0.7;
+  transition: $transition-default;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.tab.active {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: $mediaS) {
+    padding: $google-spacing * 1.5 $google-spacing * 0.5;
+  }
+}
+
+.tab-label {
+  color: $color-base;
+  font-size: $font-size-m;
+  white-space: nowrap;
+  user-select: none;
+  text-transform: uppercase;
+
+  @media screen and (max-width: $mediaS) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    font-size: $font-size-s;
+    text-transform: none;
+  }
+}

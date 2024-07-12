@@ -1,0 +1,49 @@
+@import 'src/styles/variables.scss';
+
+body {
+  margin: 0;
+  background-color: $color-background;
+  color: $color-base;
+  font-family: "Arimo", sans-serif;
+  font-size: $font-size-m;
+  height: 100svh;
+  width: 100vw;
+}
+
+button {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: inherit;
+  font-family: "Arimo", sans-serif;
+  font-size: $font-size-m;
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  outline: none;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

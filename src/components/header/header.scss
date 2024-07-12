@@ -1,0 +1,31 @@
+@import 'src/styles/variables.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: $google-spacing * 2;
+  padding: $google-spacing * 3 $google-spacing * 5 0;
+  background-color: $color-background-light;
+  transform: translateY(-100%);
+  animation: header-show 0.45s forwards cubic-bezier(0.250,  0.460,  0.450,  0.940) 1.2s; //same in app constants
+
+  @media screen and (max-width: $mediaM) {
+    padding: $google-spacing * 2 $google-spacing * 3 0;
+  }
+
+  @media screen and (max-width: $mediaS) {
+    gap: 0;
+    padding: $google-spacing * 2 $google-spacing 0;
+  }
+}
+
+@keyframes header-show {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+};
