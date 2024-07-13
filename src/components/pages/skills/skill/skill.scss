@@ -11,7 +11,7 @@
     margin-bottom: $google-spacing;
     fill: $color-primary;
     opacity: 0.6;
-    transition: $transition-default;
+    transition: $transition-fast;
 
     @media screen and (max-width: $mediaS) {
       width: $google-spacing * 8;

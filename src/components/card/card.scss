@@ -1,6 +1,7 @@
 @import 'src/styles/variables.scss';
 
 .card {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +10,7 @@
   border-radius: $google-spacing;
   background: $color-background-light;
   box-shadow: $box-shadow;
-  animation: card-show 0.4s forwards cubic-bezier(0.250,  0.460,  0.450,  0.940);
+  animation: card-show 0.4s cubic-bezier(0.250,  0.460,  0.450,  0.940);
   overflow: hidden;
 
   @media screen and (max-width: $mediaS) {
@@ -20,11 +21,11 @@
 @keyframes card-show {
   0% {
     opacity: 0;
-    transform: translateY($google-spacing * 2.5);
+    transform: translate(0, $google-spacing * 2.5);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate(0, 0);
     pointer-events: all;
   }
 };
