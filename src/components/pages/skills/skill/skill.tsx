@@ -31,6 +31,7 @@ export const Skill: FC<TSkill> = ({
 
     useEffect(() => {
         document.documentElement.style.overflowY = open ? 'hidden' : 'auto';
+        document.body.style.overflowY = open ? 'hidden' : 'auto';
     }, [open]);
 
     return <>
