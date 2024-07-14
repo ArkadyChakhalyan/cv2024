@@ -8,7 +8,11 @@ export const ButtonNext: FC<TButtonNextProps> = ({
     children,
     link,
 }) => {
-    return <Link to={'/' + link} className={'button-next'}>
+    return <Link
+        to={'/' + link}
+        className={'button-next'}
+        onClick={() => document.body.scrollTo({ top: 0, behavior: 'smooth' })}
+    >
         {children}
         <ArrowRightIcon />
     </Link>;
