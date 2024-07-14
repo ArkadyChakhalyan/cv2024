@@ -4,8 +4,8 @@ import {
     CODEWARS,
     CODEWARS_BADGE,
     CODEWARS_BADGE_SMALL,
-    CV,
-    EMAIL,
+    CV, EMAIL,
+    EMAIL_LINK,
     GITHUB,
     GITHUB_LINK,
     LINKEDIN,
@@ -16,7 +16,6 @@ import {
 import { Card } from '../../card/card';
 import { ILink } from './types';
 import { MailIcon } from '../../../icons/mailIcon';
-import { openLink } from '../../../helpers/openLink';
 import { TelegramIcon } from '../../../icons/telegramIcon';
 import { MEDIA_S } from '../../../constants';
 import { useTranslation } from 'react-i18next';
@@ -40,34 +39,35 @@ export const Links = () => {
         const onResize = () => {
             const links: ILink[] = [
                 {
-                    click: () => window.open(`mailto:${EMAIL}`),
                     icon: <MailIcon />,
                     label: EMAIL,
+                    link: EMAIL_LINK,
                 },
                 {
-                    click: () => openLink(GITHUB_LINK),
                     icon: <GithubIcon />,
                     label: GITHUB,
+                    link: GITHUB_LINK,
                 },
                 {
-                    click: () => openLink(TG_LINK),
                     icon: <TelegramIcon />,
                     label: TG,
+                    link: TG_LINK,
                 },
                 {
-                    click: () => openLink(LINKEDIN_LINK),
                     icon: <LinkedInIcon />,
                     label: LINKEDIN,
+                    link: LINKEDIN_LINK,
                 },
                 {
-                    click: () => openLink(getAppLanguage() === EAppLang.EN ? cvEn : cvRu),
+                    download: true,
+                    divider: true,
                     icon: <DownloadIcon />,
                     label: t(CV),
-                    divider: true,
+                    link: getAppLanguage() === EAppLang.EN ? cvEn : cvRu,
                 },
                 {
-                    click: () => openLink(CODEWARS, ),
                     img: window.innerWidth <= MEDIA_S ? CODEWARS_BADGE_SMALL : CODEWARS_BADGE,
+                    link: CODEWARS,
                 },
             ];
             setLinks(links);
@@ -83,11 +83,17 @@ export const Links = () => {
             {links.map(link => (
                 <>
                     {link.divider && <div className={'divider'}/>}
-                    <button className={'link'} key={link.label} onClick={link.click} >
+                    <a
+                        href={link.link}
+                        target={'_blank'}
+                        className={'link'}
+                        key={link.label}
+                        download={link.download}
+                    >
                         {link.icon && link.icon}
                         {link.label && link.label}
                         {link.img && <img src={link.img} alt={link.label}/>}
-                    </button>
+                    </a>
                 </>
             ))}
         </Card>

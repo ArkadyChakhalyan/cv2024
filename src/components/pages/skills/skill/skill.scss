@@ -64,9 +64,13 @@
 .skill-items {
   display: flex;
   flex-direction: column;
-  gap: $google-spacing * 0.75;
+  gap: $google-spacing;
   width: 100%;
   padding-left: $google-spacing * 3;
+
+  @media screen and (max-width: $mediaS) {
+    padding-left: $google-spacing * 4;
+  }
 }
 
 .skill-item {

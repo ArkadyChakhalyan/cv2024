@@ -1,6 +1,7 @@
 export const TG = '@ArkadyCh';
 export const TG_LINK = 'https://t.me/ArkadyCh';
 export const EMAIL = 'arkadychakhalyan@gmail.com';
+export const EMAIL_LINK = 'mailto:arkadychakhalyan@gmail.com';
 export const CODEWARS = 'https://www.codewars.com/users/ArkCh/';
 export const CODEWARS_BADGE = 'https://www.codewars.com/users/ArkCh/badges/small';
 export const CODEWARS_BADGE_SMALL = 'https://www.codewars.com/users/ArkCh/badges/micro';

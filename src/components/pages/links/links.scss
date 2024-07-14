@@ -40,7 +40,8 @@
   gap: $google-spacing;
   height: $google-spacing * 5;
   opacity: 0.8;
-  transition: $transition-default;
+  transition: $transition-fast;
+  cursor: pointer;
 
   &:hover,
   &:focus,

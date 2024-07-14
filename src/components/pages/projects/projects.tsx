@@ -13,7 +13,7 @@ import {
     PROJECT_2_DESCRIPTION,
     PROJECT_2_LINK,
     PROJECT_2_NAME,
-    PROJECT_2_STACK
+    PROJECT_2_STACK, PROJECTS_DESCRIPTION
 } from './constants';
 import { Button } from '../../button/button';
 import { useTranslation } from 'react-i18next';
@@ -44,6 +44,7 @@ export const Projects = () => {
     ];
 
     return <div className={'projects-container'}>
+        <p className={'projects-description'}>{t(PROJECTS_DESCRIPTION)}</p>
         <div className={'projects'}>
             {projects.map(project => (
                 <Card key={project.name} className={'project'}>

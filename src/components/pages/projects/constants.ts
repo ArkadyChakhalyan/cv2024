@@ -1,5 +1,7 @@
 export const GO_TO = 'view';
 
+export const PROJECTS_DESCRIPTION = 'projectsDescription';
+
 export const PROJECT_1_DESCRIPTION = 'project1description';
 export const PROJECT_1_NAME = 'project1name';
 export const PROJECT_1_LINK = 'https://github.com/ArkadyChakhalyan/cv2024';
