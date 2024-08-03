@@ -39,7 +39,7 @@ import {
     OTHER_ITEM_1,
     OTHER_ITEM_2,
     OTHER_ITEM_3,
-    OTHER_ITEM_4,
+    OTHER_ITEM_4, OTHER_ITEM_5, OTHER_ITEM_6, OTHER_ITEM_7,
     OTHER_LABEL
 } from './constants';
 import { ButtonNext } from '../../buttonNext/buttonNext';
@@ -104,6 +104,9 @@ export const Skills = () => {
                 t(OTHER_ITEM_2),
                 t(OTHER_ITEM_3),
                 t(OTHER_ITEM_4),
+                t(OTHER_ITEM_5),
+                t(OTHER_ITEM_6),
+                t(OTHER_ITEM_7),
             ],
             icon: <ListIcon />,
         },

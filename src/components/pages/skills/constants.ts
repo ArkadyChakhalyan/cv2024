@@ -37,6 +37,9 @@ export const OTHER_ITEM_1 = 'other1';
 export const OTHER_ITEM_2 = 'other2';
 export const OTHER_ITEM_3 = 'other3';
 export const OTHER_ITEM_4 = 'other4';
+export const OTHER_ITEM_5 = 'other5';
+export const OTHER_ITEM_6 = 'other6';
+export const OTHER_ITEM_7 = 'other7';
 
 export const LANGS_ITEM_1 = 'language1';
 export const LANGS_ITEM_2 = 'language2';
